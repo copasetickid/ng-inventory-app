@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter } from '@angular/core';
 import { Product } from './product.model';
 
 @Component({
@@ -22,5 +22,9 @@ export class AppComponent {
           'A Nice Black Hat', '/assets/images/products/black-hat.jpg', ['Men', 'Accessories', 'Hats'],
           29.99)
     ];
+  }
+
+  productWasSelected(product: Product): void {
+    console.log('Product clicked', product);
   }
 }
